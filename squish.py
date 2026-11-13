@@ -11,3 +11,11 @@ x= data[1:, 0].astype(np.float32)
 y= data[1:,1].astype(np.float32)
 print("y = ", y)
 print("x = ", x)
+params, params_cov = scipy.optimize.curve_fit(linear, x, y)
+slope = params[0]
+intercept = params[1]
+#exercise 1
+x_unit="g"
+y_unit="cm"
+print_equation(slope, intercept, y_unit, x_unit)
+#The equation of the line is y=
